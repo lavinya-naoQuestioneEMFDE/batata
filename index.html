@@ -1,23 +1,125 @@
 <!DOCTYPE html>
-
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-    header {
-background-color: #F0C2A6;
-}
-</style>
-<title>receitas faceis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas.com.br</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>receitas.com.br</h1>
-<p>aqui faremos praticas e rapidas</p>
-<main>
-<h2>comidas como batata, etc</h2>
-<p>Feito por:Vinicius, Lavinya</p>
-<p>Boas-vindas ao melhor site de receitas faceis do mundo, aprenda com cuidado e boa sorte</p>
-</main>
+
+    <header class="header">
+        <h1 class="logo">Receitas.com.br</h1>
+        <p class="authors">Por <span>Vinicius P. Bueno</span> & <span>Lavinya S. Heinzen</span></p>
+    </header>
+
+    <nav class="tabs-container">
+        <button class="tab-btn active" onclick="openTab('salgados')">Salgados</button>
+        <button class="tab-btn" onclick="openTab('doces')">Doces</button>
+    </nav>
+
+    <main class="container">
+
+        <section id="salgados" class="tab-content active">
+            <h2 class="section-title">Receitas Salgadas Simples</h2>
+            
+            <div class="recipe-grid">
+                <article class="recipe-card">
+                    <h3>Crepioca Rápida</h3>
+                    <p class="prep-time">⏱️ 5 minutos</p>
+                    
+                    <h4>Ingredientes:</h4>
+                    <ul>
+                        <li>1 ovo</li>
+                        <li>2 colheres (sopa) de massa pronta para tapioca</li>
+                        <li>1 pitada de sal e temperos a gosto</li>
+                        <li>Queijo fatiado para rechear</li>
+                    </ul>
+
+                    <h4>Modo de Preparo:</h4>
+                    <ol>
+                        <li>Em uma tigela pequena, bata bem o ovo com a tapioca e o sal.</li>
+                        <li>Despeje a mistura em uma frigideira antiaderente pré-aquecida.</li>
+                        <li>Deixe dourar o fundo, adicione o queijo de um lado e dobre ao meio. Servir quente.</li>
+                    </ol>
+                </article>
+
+                <article class="recipe-card">
+                    <h3>Pão de Queijo de Frigideira</h3>
+                    <p class="prep-time">⏱️ 8 minutos</p>
+                    
+                    <h4>Ingredientes:</h4>
+                    <ul>
+                        <li>1 ovo</li>
+                        <li>1 colher (sopa) de requeijão cremoso</li>
+                        <li>3 colheres (sopa) de polvilho azedo ou doce</li>
+                        <li>1 colher (sopa) de queijo ralado</li>
+                        <li>1 pitada de sal</li>
+                    </ul>
+
+                    <h4>Modo de Preparo:</h4>
+                    <ol>
+                        <li>Misture todos os ingredientes com um garfo até formar uma massa homogênea.</li>
+                        <li>Despeje em uma frigideira untada em fogo baixo.</li>
+                        <li>Tampe e deixe assar por uns 3 minutos de cada lado até dourar.</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+        <section id="doces" class="tab-content">
+            <h2 class="section-title">Receitas Doces Práticas</h2>
+            
+            <div class="recipe-grid">
+                <article class="recipe-card">
+                    <h3>Brigadeiro de Micro-ondas</h3>
+                    <p class="prep-time">⏱️ 6 minutos</p>
+                    
+                    <h4>Ingredientes:</h4>
+                    <ul>
+                        <li>1 lata/caixinha de leite condensado</li>
+                        <li>2 colheres (sopa) de chocolate em pó</li>
+                        <li>1 colher (sopa) de manteiga</li>
+                    </ul>
+
+                    <h4>Modo de Preparo:</h4>
+                    <ol>
+                        <li>Misture todos os ingredientes em um recipiente alto próprio para micro-ondas.</li>
+                        <li>Leve ao micro-ondas em potência alta por 3 minutos.</li>
+                        <li>Retire com cuidado, mexa bem e volte por mais 2 minutos até dar o ponto desejado. Deixe esfriar.</li>
+                    </ol>
+                </article>
+
+                <article class="recipe-card">
+                    <h3>Mousse de Limão Express</h3>
+                    <p class="prep-time">⏱️ 5 minutos (+ geladeira)</p>
+                    
+                    <h4>Ingredientes:</h4>
+                    <ul>
+                        <li>1 lata de leite condensado</li>
+                        <li>1 caixa de creme de leite</li>
+                        <li>Suco de 3 a 4 limões espremidos</li>
+                    </ul>
+
+                    <h4>Modo de Preparo:</h4>
+                    <ol>
+                        <li>Coloque o leite condensado e o creme de leite no liquidificador ou tigela.</li>
+                        <li>Vá adicionando o suco de limão aos poucos enquanto bate bem até engrossar.</li>
+                        <li>Distribua em taças e leve à geladeira por 1 hora antes de servir.</li>
+                    </ol>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Receitas.com.br - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
