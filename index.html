@@ -1,125 +1,235 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas.com.br</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receitas Fáceis</title>
+<link rel="preconnect" href=" https://fonts.googleapis.com ">
+<link rel="preconnect" href=" https://fonts.gstatic.com " crossorigin>
+<link href=" https://fonts.googleapis.com/css2?family=SickCapital&display=swap " rel="stylesheet">
+
+<style>
+* {
+box-sized: caixa com borda;
+}
+
+corpo {
+família de fontes: Arial, sem serifa;
+margem: 0;
+preenchimento: 0;
+cor de fundo: #FAF5EF;
+cor: #333;
+}
+
+/* Cabeçalho */
+cabeçalho {
+cor de fundo: #F0C2A6;
+alinhamento do texto: centralizado;
+largura máxima: 800px;
+margem: 0 auto;
+preenchimento: 24px 16px;
+raio da borda: 0 0 12px 12px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+cabeçalho h1 {
+família de fontes: 'SickCapital', sem serifa;
+tamanho da fonte: 2,8rem;
+cor: #8B3A00;
+margem: 0 0 8px 0;
+}
+
+cabeçalho p {
+margem: 0;
+tamanho da fonte: 1,1rem;
+cor: #5A2A00;
+}
+
+/* Conteúdo Principal */
+principal {
+largura máxima: 800px;
+margem: 24px automática;
+preenchimento: 24px;
+cor de fundo: #ffffff;
+raio da borda: 12px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.boas-vindas {
+borda inferior: 2px tracejada #F0C2A6;
+preenchimento-inferior: 16px;
+margem-inferior: 24px;
+}
+
+.boas-vindas h2 {
+Cor: #4A6B32;
+margem superior: 0;
+}
+
+.autores {
+tamanho da fonte: 0,95rem;
+cor: #666;
+margem-inferior: 8px;
+}
+
+/* Seção de Receitas */
+.secao-receitas {
+Exibir: flexível;
+flex-direction: coluna;
+espaço: 24px;
+}
+
+.card-receita {
+borda: 1px sólida #EAEAEA;
+borda esquerda: 6px sólida #F0C2A6;
+raio da borda: 8px;
+preenchimento: 20px;
+cor de fundo: #FFFDFB;
+}
+
+.card-receita h3 {
+cor: #8B3A00;
+margem superior: 0;
+tamanho da fonte: 1,4rem;
+}
+
+/* Imagens das Receitas */
+.img-receita {
+largura: 100%;
+altura máxima: 350px;
+ajuste ao objeto: capa;
+raio da borda: 8px;
+margem-inferior: 16px;
+}
+
+.ingredientes h4, .modo-preparo h4, .video-container h4 {
+Cor: #4A6B32;
+margem-inferior: 8px;
+}
+
+ul, ol {
+preenchimento-esquerdo: 20px;
+altura da linha: 1,6;
+}
+
+/* Container Responsivo para Vídeos */
+.video-box {
+posição: relativa;
+preenchimento inferior: 56,25%; /* Proporção 16:9 */
+altura: 0;
+overflow: oculto;
+raio da borda: 8px;
+margem superior: 12px;
+}
+
+.video-box iframe {
+posição: absoluta;
+topo: 0;
+esquerda: 0;
+largura: 100%;
+altura: 100%;
+borda: 0;
+}
+
+/* Rodapé */
+rodapé {
+alinhamento do texto: centralizado;
+preenchimento: 20px;
+tamanho da fonte: 0,9rem;
+cor: #777;
+}
+</style>
 </head>
 <body>
 
-    <header class="header">
-        <h1 class="logo">Receitas.com.br</h1>
-        <p class="authors">Por <span>Vinicius P. Bueno</span> & <span>Lavinya S. Heinzen</span></p>
-    </header>
+<header>
+<h1> receitas.com.br </h1>
+<p>Aqui vamos fazer receitas práticas e rápidas</p>
+</header>
 
-    <nav class="tabs-container">
-        <button class="tab-btn active" onclick="openTab('salgados')">Salgados</button>
-        <button class="tab-btn" onclick="openTab('doces')">Doces</button>
-    </nav>
+<principal>
+<section class="boas-vindas">
+<h2>Boas-vindas!</h2>
+<p class="autores"><strong>Feito por:</strong> Vinicius e Lavinya</p>
+<p>Seja bem-vindo ao melhor site de receitas simples do mundo! Aprenda com cuidado, divirta-se na cozinha e boa sorte.</p>
+</section>
 
-    <main class="container">
+<section class="secao-receitas">
+<h2>Receitas em</h2>
 
-        <section id="salgados" class="tab-content active">
-            <h2 class="section-title">Receitas Salgadas Simples</h2>
-            
-            <div class="recipe-grid">
-                <article class="recipe-card">
-                    <h3>Crepioca Rápida</h3>
-                    <p class="prep-time">⏱️ 5 minutos</p>
-                    
-                    <h4>Ingredientes:</h4>
-                    <ul>
-                        <li>1 ovo</li>
-                        <li>2 colheres (sopa) de massa pronta para tapioca</li>
-                        <li>1 pitada de sal e temperos a gosto</li>
-                        <li>Queijo fatiado para rechear</li>
-                    </ul>
+<article class="card-receita">
+<h3>🥔 Batata Rústica no Forno</h3>
+<img src=" http://googleusercontent.com/image_collection/image_retrieval/14516780096642253184_0 " alt="Batata Rústica Assada" class="img-receita">
+<p>Crocante por fora e macio por dentro, perfeito para um lanche rápido!</p>
 
-                    <h4>Modo de Preparo:</h4>
-                    <ol>
-                        <li>Em uma tigela pequena, bata bem o ovo com a tapioca e o sal.</li>
-                        <li>Despeje a mistura em uma frigideira antiaderente pré-aquecida.</li>
-                        <li>Deixe dourar o fundo, adicione o queijo de um lado e dobre ao meio. Servir quente.</li>
-                    </ol>
-                </article>
+<div class="ingredientes">
+<h4>Ingredientes:</h4>
+<ul>
+<li>3 batatas grandes lavadas</li>
+<li>2 colheres (sopa) de azeite</li>
+<li>1 colher (chá) de páprica doce ou picante</li>
+<li>Sal, pimenta-do-reino e orégano a gosto</li>
+</ul>
+</div>
 
-                <article class="recipe-card">
-                    <h3>Pão de Queijo de Frigideira</h3>
-                    <p class="prep-time">⏱️ 8 minutos</p>
-                    
-                    <h4>Ingredientes:</h4>
-                    <ul>
-                        <li>1 ovo</li>
-                        <li>1 colher (sopa) de requeijão cremoso</li>
-                        <li>3 colheres (sopa) de polvilho azedo ou doce</li>
-                        <li>1 colher (sopa) de queijo ralado</li>
-                        <li>1 pitada de sal</li>
-                    </ul>
+<div class="modo-preparo">
+<h4>Modo de Preparado:</h4>
+<ol>
+<li>Corte as batatas em gomos (com casca mesmo).</li>
+<li>Em uma tigela, tempere as batatas com azeite, páprica, orégano, sal e pimenta.</li>
+<li>Espalhe em uma assadeira sem sobrepor as batatas.</li>
+<li>Leve o forno pré-aquecido a 200°C por cerca de 30 a 40 minutos até dourarem.</li>
+</ol>
+</div>
 
-                    <h4>Modo de Preparo:</h4>
-                    <ol>
-                        <li>Misture todos os ingredientes com um garfo até formar uma massa homogênea.</li>
-                        <li>Despeje em uma frigideira untada em fogo baixo.</li>
-                        <li>Tampe e deixe assar por uns 3 minutos de cada lado até dourar.</li>
-                    </ol>
-                </article>
-            </div>
-        </section>
+<div class="video-container">
+<h4>Vídeo Explicativo:</h4>
+<div class="video-box">
+<iframe src=" https://www.youtube.com/embed/5yR9w_G8_3o " title="Como fazer Batata Rústica"allowfullscreen></iframe>
+</div>
+</div>
+</article>
 
-        <section id="doces" class="tab-content">
-            <h2 class="section-title">Receitas Doces Práticas</h2>
-            
-            <div class="recipe-grid">
-                <article class="recipe-card">
-                    <h3>Brigadeiro de Micro-ondas</h3>
-                    <p class="prep-time">⏱️ 6 minutos</p>
-                    
-                    <h4>Ingredientes:</h4>
-                    <ul>
-                        <li>1 lata/caixinha de leite condensado</li>
-                        <li>2 colheres (sopa) de chocolate em pó</li>
-                        <li>1 colher (sopa) de manteiga</li>
-                    </ul>
+<article class="card-receita">
+<h3>🍫 Brigadeiro Tradicional</h3>
+<img src=" http://googleusercontent.com/image_collection/image_retrieval/15160923329708473337_0 " alt="Brigadeiro Tradicional" class="img-receita">
+<p>O doce brasileiro mais amado e fácil de fazer.</p>
 
-                    <h4>Modo de Preparo:</h4>
-                    <ol>
-                        <li>Misture todos os ingredientes em um recipiente alto próprio para micro-ondas.</li>
-                        <li>Leve ao micro-ondas em potência alta por 3 minutos.</li>
-                        <li>Retire com cuidado, mexa bem e volte por mais 2 minutos até dar o ponto desejado. Deixe esfriar.</li>
-                    </ol>
-                </article>
+<div class="ingredientes">
+<h4>Ingredientes:</h4>
+<ul>
+<li>1 caixa de leite condensado (395g)</li>
+<li>1 colher (sopa) de manteiga</li>
+<li>3 colheres (sopa) de achocolatado ou cacau em pó</li>
+<li>Granulado para decorar</li>
+</ul>
+</div>
 
-                <article class="recipe-card">
-                    <h3>Mousse de Limão Express</h3>
-                    <p class="prep-time">⏱️ 5 minutos (+ geladeira)</p>
-                    
-                    <h4>Ingredientes:</h4>
-                    <ul>
-                        <li>1 lata de leite condensado</li>
-                        <li>1 caixa de creme de leite</li>
-                        <li>Suco de 3 a 4 limões espremidos</li>
-                    </ul>
+<div class="modo-preparo">
+<h4>Modo de Preparado:</h4>
+<ol>
+<li>Em uma panela, o leite condensado, a manteiga e o achocolatado.</li>
+<li>Leve ao fogo médio/baixo, confusão sempre para não grudar no fundo.</li>
+<li>Cozinhe até a mistura soltar do fundo da panela (ponto de brigadeiro).</li>
+<li>Despeje em um prato untado com manteiga e deixe esfriar. Inscreva-se e passe no granulado!</li>
+</ol>
+</div>
 
-                    <h4>Modo de Preparo:</h4>
-                    <ol>
-                        <li>Coloque o leite condensado e o creme de leite no liquidificador ou tigela.</li>
-                        <li>Vá adicionando o suco de limão aos poucos enquanto bate bem até engrossar.</li>
-                        <li>Distribua em taças e leve à geladeira por 1 hora antes de servir.</li>
-                    </ol>
-                </article>
-            </div>
-        </section>
+<div class="video-container">
+<h4>Vídeo Explicativo:</h4>
+<div class="video-box">
+<iframe src=" https://www.youtube.com/embed/9N4iV17TqQc " title="Como fazer Brigadeiro"allowfullscreen></iframe>
+</div>
+</div>
+</article>
 
-    </main>
+</section>
+</main>
 
-    <footer class="footer">
-        <p>&copy; Receitas.com.br - Todos os direitos reservados.</p>
-    </footer>
+<rodapé>
+<p>&copy; 2026 receitas.com.br - Todos os direitos reservados.</p>
+</footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
+
